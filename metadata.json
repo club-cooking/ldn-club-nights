@@ -1,0 +1,28 @@
+{
+    "title": "London club nights, 2014-2019",
+    "source": "Resident Advisor",
+    "source_url": "https://ra.co/events/uk/london",
+    "about_url": "https://github.com/club-cooking/ldn-venues",
+    "databases": {
+        "ldn-club-nights": {
+            "tables": {
+                "clubs": {
+                    "description": "clubs in London, as listed on RA",
+                    "facets": ["club_status"]
+                },
+                "events": {
+                    "description": "events in London, as listed on RA, across 2014-2019",
+                    "facets": ["club_id"]
+                },
+                "artists": {
+                    "description": "artists listed on event lineups across 2014-2019",
+                    "facets": ["event_id", "club_id"]
+                },
+                "promoters": {
+                    "description": "promoters organising events across 2014-2019",
+                    "facets": ["event_id", "club_id"]
+                }
+            }
+        }
+    }
+}
