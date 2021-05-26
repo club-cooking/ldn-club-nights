@@ -1,6 +1,6 @@
-# ldn-venues
+# ldn-club-nights
 
-Data on clubs, events and line-ups in London listed on Resident Advisor (RA).
+Data on clubs, events and line-ups in London listed on Resident Advisor (RA) across the years 2014-2019. Last scraped mid-2020.
 
 ## data-raw
 
@@ -82,4 +82,4 @@ Follow numeric prefix for the correct order of running each .R script:
 
 ## config
 
-Config files to change the behaviour of the scraper, specifically the detailed event info (i.e. lineups). Edit `club-lineups-config.csv` if you want to pull line-ups for different clubs. Edit `month-lineups-config.csv` if you want to pull line-ups for different time period.
+Config files to change the behaviour of the scraper, specifically the detailed event info (i.e. lineups). Edit `month-lineups-config.csv` if you want to pull line-ups for different time period.
