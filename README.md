@@ -1,6 +1,8 @@
 # ldn-club-nights
 
-Data on clubs, events and line-ups in London listed on Resident Advisor (RA) across the years 2014-2019. Last scraped mid-2020.
+Data on clubs, events and line-ups in London listed on Resident Advisor (RA) across the years 2014-2019.
+
+N.B. This dataset was scraped from RA in mid-2020, prior to a major site overhaul. The code will need adapting to work with the current site.
 
 ## data-raw
 
@@ -12,7 +14,7 @@ This folder contains the processed data files, detailed below.
 
 ### `clubs.csv`
 
-Data on 1325 clubs in London listed on RA. 
+Data on clubs in London listed on RA. 
 
 Data dictionary:
 
@@ -23,6 +25,32 @@ Data dictionary:
 | club_id     | A numeric identifier used for the club on RA                                                                                                                                |
 | club_status  | Logical; is the club open or closed |
 
+### `artists.csv`
+
+Data on artists listed on RA. 
+
+Data dictionary:
+
+| Column    | Description                                                                                                                                                                |
+|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| artist_id      | A unique identifier used for the artist on RA                                                                                                                                 |
+| artist_name   | The name of the artist                                                                                                                 |
+| event_id     | A numeric identifier used for the event on RA                                                                                                                                |
+| club_id  | A numeric identifier used for the club on RA |
+
+### `promoters.csv`
+
+Data on promoters listed on RA. 
+
+Data dictionary:
+
+| Column    | Description                                                                                                                                                                |
+|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| promoter_id      | A numeric identifier used for the promoter on RA                                                                                                                                 |
+| promoter_name   | The name of the promoter                                                                                                                 |
+| event_id     | A numeric identifier used for the event on RA                                                                                                                                |
+| club_id  | A numeric identifier used for the club on RA |
+
 ### `events.csv`
 
 Data on events in London listed on RA.
@@ -31,47 +59,10 @@ Data dictionary:
 
 | Column    | Description                                                                                                                                                                |
 |:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| club_id      | A numeric identifier used for the club on RA                                                                                                                                 |
 | event_id   | A numeric identifier used for the event on RA                                                                                                               |
 | event_name     | The name of the event                                                                                                                                |
 | event_date  | The date of the event |
-
-### `lineups-club.json`
-
-Full lineup history for selected clubs.
-
-Data dictionary:
-
-| Column    | Description                                                                                                                                                                |
-|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| event_id   | A numeric identifier used for the event on RA  |
-| event_name | The name of the event |
-| event_date | The date of the event |
-| venue_id | A numeric identifier used for the club on RA |
-| venue_name | The name of the club |
-| artist_name | The name of the artist |
-| artist_id | A numeric identifier used for the artist on RA |
-| promoter_name | The name of the promoter |
-| promoter_id | A numeric identifier used for the promoter on RA |
-
-### `lineups-month.json`
-
-Lineups for all clubs in London in 2014-2019.
-
-Data dictionary:
-
-| Column    | Description                                                                                                                                                                |
-|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| region_code   | A identifier used for the event region on RA  |
-| event_id   | A numeric identifier used for the event on RA  |
-| event_name | The name of the event |
-| event_date | The date of the event |
-| venue_id | A numeric identifier used for the club on RA |
-| venue_name | The name of the club |
-| artist_name | The name of the artist |
-| artist_id | A numeric identifier used for the artist on RA |
-| promoter_name | The name of the promoter |
-| promoter_id | A numeric identifier used for the promoter on RA |
+| club_id      | A numeric identifier used for the club on RA  |
 
 ## code
 
