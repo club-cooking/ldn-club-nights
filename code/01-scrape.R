@@ -13,9 +13,6 @@ library(glue)
 # get local functions
 source("utils/functions.R")
 
-# get selected clubs' lineup history
-club_config <- read_csv("config/club-lineups-config.csv")
-
 # get months for lineups
 month_config <- read_csv("config/month-lineups-config.csv")
 months <- seq.Date(
@@ -36,9 +33,6 @@ future_map(clubs$club_id, possibly(ra_get_club_events, NA_real_)) %>%
 
 # get events data
 events <- read_json("data/events.json", simplifyVector = TRUE)
-
-# get detailed event info
-future_map(club_config$club_id, ~get_club_lineups(events, club_id = .x))
 
 # get lineups x month -----------------------------------------------------
 

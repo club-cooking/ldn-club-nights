@@ -20,10 +20,6 @@ events <- events[sapply(events, length) == 2] # remove missing records
 lineups_month_files <- list.files("data-raw/lineups-month", full.names = TRUE)
 lineups_month <- future_map(lineups_month_files, read_json, simplifyVector = TRUE)
 
-# get lineups x club
-lineups_club_files <- list.files("data-raw/lineups-club", full.names = TRUE)
-lineups_club <- future_map_dfr(lineups_club_files, read_json, simplifyVector = TRUE)
-
 # clean data --------------------------------------------------------------
 
 # create clubs dataframe
