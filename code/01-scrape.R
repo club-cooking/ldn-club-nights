@@ -9,14 +9,15 @@ library(tidyr)
 library(purrr)
 library(furrr)
 library(glue)
+library(yaml)
 
 # get local functions
 source("utils/functions.R")
 
 # get months for lineups
-month_config <- read_csv("config/month-lineups-config.csv")
+month_config <- read_yaml("config/month-config.yml")
 months <- seq.Date(
-  month_config$start_date, month_config$end_date, by = "1 month"
+  as.Date(month_config$start_date), as.Date(month_config$end_date), by = "1 month"
 )
 
 # get clubs ---------------------------------------------------------------

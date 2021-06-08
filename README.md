@@ -73,4 +73,4 @@ Follow numeric prefix for the correct order of running each .R script:
 
 ## config
 
-Config files to change the behaviour of the scraper, specifically the detailed event info (i.e. lineups). Edit `month-lineups-config.csv` if you want to pull line-ups for different time period.
+Config files to change the behaviour of the scraper, specifically the detailed event info (i.e. lineups). Edit `month-config.yml` if you want to pull line-ups for different time period.
